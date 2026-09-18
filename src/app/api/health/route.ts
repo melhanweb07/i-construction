@@ -1,13 +1,4 @@
-import { db } from "@/db";
-import { sql } from "drizzle-orm";
-
-export const dynamic = "force-dynamic";
-
 export async function GET() {
-  try {
-    await db.execute(sql`select 1`);
-    return Response.json({ ok: true });
-  } catch {
-    return Response.json({ ok: false }, { status: 500 });
-  }
+  // Database health checks are disabled while the frontend is hosted without a backend.
+  return Response.json({ ok: true, database: "disabled" });
 }
