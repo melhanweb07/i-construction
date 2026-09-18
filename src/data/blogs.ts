@@ -1,0 +1,130 @@
+import type { BlogPost } from "@/types";
+
+const cover = [
+  "https://images.pexels.com/photos/37687676/pexels-photo-37687676.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400",
+  "https://images.pexels.com/photos/35300835/pexels-photo-35300835.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400",
+  "https://images.pexels.com/photos/14825517/pexels-photo-14825517.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400",
+  "https://images.pexels.com/photos/30278762/pexels-photo-30278762.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400",
+  "https://images.pexels.com/photos/12924751/pexels-photo-12924751.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400",
+  "https://images.pexels.com/photos/10084627/pexels-photo-10084627.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400",
+  "https://images.pexels.com/photos/35567574/pexels-photo-35567574.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400",
+  "https://images.pexels.com/photos/14903969/pexels-photo-14903969.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400",
+];
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: "blog-01",
+    slug: "choosing-the-right-foundation",
+    title: "Choosing the Right Foundation for Your Plot",
+    excerpt: "Soil type, water table and load requirements all shape the right foundation system for your home.",
+    content: [
+      "The foundation is the single most important structural decision in any build. Before design even begins, a proper soil investigation should determine bearing capacity, water table depth and soil composition.",
+      "For most independent residential plots in the region, isolated or raft foundations are common depending on soil bearing capacity. Larger or multi-storey structures typically require pile foundations to transfer load to deeper, stable strata.",
+      "Our engineering team always recommends a geotechnical report before finalising any structural drawing — it is a small upfront cost that prevents significant long-term risk.",
+    ],
+    category: "Articles",
+    date: "2025-01-14",
+    author: "I Construction Editorial",
+    coverImage: cover[0],
+  },
+  {
+    id: "blog-02",
+    slug: "havenwood-villas-progress-update",
+    title: "Havenwood Villas: Structural Milestone Reached",
+    excerpt: "First floor slabs are now complete across ten of twelve villa units, with electrical works underway.",
+    content: [
+      "Construction at Havenwood Villas has crossed a major milestone with first-floor slab casting completed across ten of the twelve independent units.",
+      "The remaining two units, located on the site's northern boundary, are progressing on a slightly adjusted schedule due to additional retaining wall work.",
+      "Electrical conduiting has now begun on the ground floor of completed units, keeping the project on track for its phased handover plan.",
+    ],
+    category: "Project Updates",
+    date: "2025-02-02",
+    author: "Site Engineering Team",
+    coverImage: cover[1],
+  },
+  {
+    id: "blog-03",
+    slug: "site-walkthrough-orion-business-park",
+    title: "Video: Completed Walkthrough of Orion Business Park",
+    excerpt: "A full walkthrough of the completed commercial development, from lobby to top-floor terrace.",
+    content: [
+      "This walkthrough video (placeholder) tours the completed Orion Business Park development, highlighting the column-free floor plates, the glazed facade system and the rooftop terrace amenity space.",
+      "Commercial leasing enquiries for available floors can be directed through our contact page.",
+    ],
+    category: "Videos",
+    date: "2024-12-10",
+    author: "I Construction Media",
+    coverImage: cover[2],
+  },
+  {
+    id: "blog-04",
+    slug: "i-real-estate-division-announcement",
+    title: "Announcing the Expansion of I Real Estate",
+    excerpt: "Our real-estate division is expanding its plot portfolio across three new layouts this year.",
+    content: [
+      "We are pleased to share that I Real Estate is expanding its curated plot portfolio, with new residential and commercial layouts opening for enquiry this year.",
+      "As always, every plot listed carries verified documentation and clear title information, reviewed before being made available to buyers.",
+    ],
+    category: "Announcements",
+    date: "2025-03-01",
+    author: "I Real Estate Team",
+    coverImage: cover[3],
+  },
+  {
+    id: "blog-05",
+    slug: "5-questions-before-buying-a-plot",
+    title: "5 Questions to Ask Before Buying a Plot",
+    excerpt: "A short checklist covering title verification, road access, zoning and utility connections.",
+    content: [
+      "Buying land is a long-term decision. Before committing, always verify: 1) Clear and marketable title, 2) DTCP/RERA approval status where applicable, 3) Physical road access width, 4) Availability of electricity and water connection points, and 5) Any pending encumbrances.",
+      "Our real-estate advisors are available to walk you through documentation for any listed plot.",
+    ],
+    category: "Articles",
+    date: "2025-01-28",
+    author: "I Real Estate Editorial",
+    coverImage: cover[4],
+  },
+  {
+    id: "blog-06",
+    slug: "skyline-tower-electrical-milestone",
+    title: "Skyline Corporate Tower Reaches Electrical Riser Stage",
+    excerpt: "Structural work continues on upper floors as riser shaft electrical works begin below.",
+    content: [
+      "The Skyline Corporate Tower project has reached 48% completion, with riser shaft electrical containment now underway on completed floors while structural work continues above.",
+      "The project remains on schedule for its projected 2026 completion window.",
+    ],
+    category: "Project Updates",
+    date: "2025-03-10",
+    author: "Site Engineering Team",
+    coverImage: cover[5],
+  },
+  {
+    id: "blog-07",
+    slug: "interior-trends-2025",
+    title: "Interior Material Trends We're Watching in 2025",
+    excerpt: "From micro-cement finishes to warm minimalism, here's what clients are asking for this year.",
+    content: [
+      "Interior briefs this year have leaned heavily toward warm minimalism — natural stone, micro-cement wall finishes and exposed timber joinery paired with soft, layered lighting.",
+      "We're also seeing renewed interest in courtyard-style planning for improved natural light in dense residential plots.",
+    ],
+    category: "Articles",
+    date: "2025-02-20",
+    author: "I Construction Editorial",
+    coverImage: cover[6],
+  },
+  {
+    id: "blog-08",
+    slug: "company-showreel-2024",
+    title: "Video: I Construction Company Showreel 2024",
+    excerpt: "A cinematic look back at the projects delivered across construction and real estate this year.",
+    content: [
+      "This showreel (placeholder) brings together highlights from residential, commercial and industrial projects delivered this year, alongside a look at newly available plots from I Real Estate.",
+    ],
+    category: "Videos",
+    date: "2024-12-30",
+    author: "I Construction Media",
+    coverImage: cover[7],
+  },
+];
+
+export const blogCategories = ["All", "Articles", "Project Updates", "Videos", "Announcements"] as const;
