@@ -40,6 +40,7 @@ export default function PropertyCard({ property }: { property: Property }) {
           src={property.images[0]}
           alt={property.name}
           fill
+          quality={70}
           sizes="(min-width: 1024px) 33vw, 100vw"
           className={`object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-105 ${isSold ? "grayscale-[0.35]" : ""}`}
         />

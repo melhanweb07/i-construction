@@ -4,8 +4,8 @@ import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import Chatbot from "@/components/chatbot/Chatbot";
 import PageTransition from "@/components/layout/PageTransition";
+import ChatbotLoader from "@/components/chatbot/ChatbotLoader";
 
 const heading = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <PageTransition>{children}</PageTransition>
         </main>
         <Footer />
-        <Chatbot />
+        <ChatbotLoader />
       </body>
     </html>
   );

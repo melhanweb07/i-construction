@@ -27,6 +27,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
           src={post.coverImage}
           alt={post.title}
           fill
+          quality={70}
           sizes="(min-width: 1024px) 33vw, 100vw"
           className="object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-105"
         />

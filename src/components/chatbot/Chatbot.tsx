@@ -33,7 +33,7 @@ export default function Chatbot() {
       id: crypto.randomUUID(),
       role: "user",
       content: trimmed,
-      timestamp: Date.now(),
+      timestamp: messages.length,
     };
     setMessages((m) => [...m, userMsg]);
     setInput("");
@@ -42,7 +42,7 @@ export default function Chatbot() {
     setTyping(false);
     setMessages((m) => [
       ...m,
-      { id: crypto.randomUUID(), role: "assistant", content: reply, timestamp: Date.now() },
+      { id: crypto.randomUUID(), role: "assistant", content: reply, timestamp: messages.length + 1 },
     ]);
   }
 

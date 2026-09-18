@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { EASE } from "@/lib/animations";
 import AnimatedText from "@/components/ui/AnimatedText";
@@ -39,16 +39,12 @@ export default function Hero({
   minHeight = "min-h-[92vh]",
 }: HeroProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [reduced, setReduced] = useState(false);
+  const reduced = useReducedMotion();
 
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
   const sx = useSpring(mx, { stiffness: 40, damping: 20 });
   const sy = useSpring(my, { stiffness: 40, damping: 20 });
-
-  useEffect(() => {
-    setReduced(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
-  }, []);
 
   function onMouseMove(e: React.MouseEvent<HTMLDivElement>) {
     if (reduced) return;
@@ -73,7 +69,7 @@ export default function Hero({
         style={reduced ? undefined : { x: sx, y: sy }}
         className="absolute inset-[-2%]"
       >
-        <Image src={image} alt="" fill priority sizes="100vw" className="object-cover" />
+        <Image src={image} alt="" fill priority quality={70} sizes="100vw" className="object-cover" />
       </motion.div>
 
       <motion.div
