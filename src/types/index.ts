@@ -2,8 +2,8 @@ export type Division = "construction" | "real-estate";
 
 export interface CompanyStat {
   id: string;
-  value: number;
-  suffix: string;
+  value: number | null;
+  suffix?: string;
   label: string;
 }
 

@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  /* Color system */
-  --color-charcoal: #0b0d0e;
-  --color-charcoal-soft: #121415;
-  --color-stone: #17191a;
-  --color-stone-light: #202324;
-  --color-gold: #c8a45d;
-  --color-gold-soft: #d9bf8c;
-  --color-offwhite: #f4f1ea;
-  --color-concrete: #a5a5a0;
-  --color-green: #596b5a;
+  --color-charcoal: #0d0d0d;
+  --color-charcoal-soft: #151515;
+  --color-stone: #1d1d1d;
+  --color-stone-light: #2a2a2a;
+  --color-gold: #b79b63;
+  --color-gold-soft: #c6aa72;
+  --color-ivory: #f5f2ea;
+  --color-offwhite: #f5f2ea;
+  --color-concrete: #a7a7a7;
+  --color-ink: #111111;
 
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
@@ -26,6 +26,7 @@ html {
   html {
     scroll-behavior: auto;
   }
+
   *,
   *::before,
   *::after {
@@ -51,6 +52,11 @@ body {
   color: var(--color-offwhite);
   font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
 }
 
 h1,
@@ -60,36 +66,38 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+p {
+  line-height: 1.7;
 }
 
 ::selection {
-  background: var(--color-gold);
-  color: var(--color-charcoal);
+  background: rgba(183, 155, 99, 0.9);
+  color: #111111;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-charcoal);
+  background: #0d0d0d;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-stone-light);
-  border-radius: 0;
+  background: #2a2a2a;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gold);
+  background: #b79b63;
 }
 
-/* Focus visibility for accessibility */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid var(--color-gold);
+  outline: 2px solid #b79b63;
   outline-offset: 3px;
 }
 
@@ -113,7 +121,7 @@ select:focus-visible {
 }
 
 .text-outline {
-  -webkit-text-stroke: 1px var(--color-concrete);
+  -webkit-text-stroke: 1px rgba(167, 167, 167, 0.45);
   color: transparent;
 }
 
@@ -126,12 +134,7 @@ select:focus-visible {
 }
 
 .hairline {
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(200, 164, 93, 0.6),
-    transparent
-  );
+  background: linear-gradient(to right, transparent, rgba(183, 155, 99, 0.75), transparent);
   height: 1px;
 }
 

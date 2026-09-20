@@ -13,7 +13,7 @@ export default function OngoingProjectsSection({ projects }: { projects: Project
   return (
     <section className="bg-[#101213] py-24 md:py-32">
       <div className="container-fluid">
-        <SectionHeading index="04 / 06" eyebrow="Currently In Progress" title="Ongoing projects, tracked openly." light />
+        <SectionHeading index="05 — ONGOING" eyebrow="Currently In Progress" title="Transparent progress across active sites." light />
 
         <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
           {projects.map((project) => (
@@ -23,16 +23,20 @@ export default function OngoingProjectsSection({ projects }: { projects: Project
               initial="hidden"
               whileInView="visible"
               viewport={viewportOnce}
-              className="flex flex-col border border-[#232628] bg-[#121415]"
+              className="flex flex-col overflow-hidden border border-[#232628] bg-[#121415] transition-colors duration-300 hover:border-[#C8A45D]/40"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
-                <Image src={project.heroImage} alt={project.title} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover" />
+                <Image src={project.heroImage} alt={project.title} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-700 hover:scale-[1.04]" />
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-[#C8A45D]">{project.category}</p>
                 <h3 className="mt-2 text-lg font-semibold text-[#F4F1EA]">{project.title}</h3>
                 <p className="mt-1 text-xs text-[#A5A5A0]">{project.location}</p>
                 <div className="mt-6">
+                  <div className="mb-2 flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-[#A5A5A0]">
+                    <span>Progress</span>
+                    <span>{project.progress}%</span>
+                  </div>
                   <ProgressBar progress={project.progress} />
                 </div>
                 <Link

@@ -9,7 +9,7 @@ export default function RealEstateHighlightSection({ properties }: { properties:
     <section className="bg-[#0B0D0E] py-24 md:py-32">
       <div className="container-fluid">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
-          <SectionHeading index="05 / 06" eyebrow="I Real Estate" title="Curated plots for your next investment." light />
+          <SectionHeading index="06 — REAL ESTATE" eyebrow="I Real Estate" title="Curated land opportunities with long-term value." light />
           <Button href="/real-estate" variant="outline">
             Explore Real Estate
           </Button>

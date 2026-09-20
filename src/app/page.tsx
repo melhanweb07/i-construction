@@ -1,6 +1,8 @@
 import Hero from "@/components/hero/Hero";
 import CompanyIntroSection from "@/components/sections/CompanyIntroSection";
 import StatsSection from "@/components/sections/StatsSection";
+import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
+import ConstructionProcessSection from "@/components/sections/ConstructionProcessSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import FeaturedProjectsSection from "@/components/sections/FeaturedProjectsSection";
 import OngoingProjectsSection from "@/components/sections/OngoingProjectsSection";
@@ -34,19 +36,21 @@ export default async function HomePage() {
   return (
     <>
       <Hero
-        eyebrow="I Construction × I Real Estate"
-        headingLines={["Building Spaces.", "Creating Futures."]}
-        description="Building with precision, delivering with purpose. Construction and real estate, under one accountable group."
+        eyebrow="I CONSTRUCTION"
+        headingLines={["Precision-built spaces.", "Designed to last."]}
+        description="Construction and real-estate solutions shaped by disciplined planning, honest communication and enduring quality."
         image="https://images.pexels.com/photos/17638341/pexels-photo-17638341.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1400&w=2200"
         actions={[
-          { label: "Explore Construction", href: "/construction" },
-          { label: "Explore Real Estate", href: "/real-estate", variant: "outline" },
+          { label: "Book a Consultation", href: "/contact" },
+          { label: "View Projects", href: "/construction/projects", variant: "outline" },
         ]}
         infoItems={heroInfoStrip}
       />
 
       <CompanyIntroSection />
       <StatsSection stats={stats} />
+      <WhyChooseUsSection />
+      <ConstructionProcessSection />
       <ServicesSection services={services} />
       <FeaturedProjectsSection projects={featuredProjects} />
       <OngoingProjectsSection projects={ongoingProjects} />
@@ -56,8 +60,8 @@ export default async function HomePage() {
 
       <CTASection
         eyebrow="Start Your Project"
-        title="Let's build something great, together."
-        description="Whether it's a new construction project or your next plot investment — our team is ready."
+        title="Let’s discuss your next move."
+        description="Whether it’s a new build, renovation or a carefully chosen plot, we’ll help you move forward with clarity."
         actions={[
           { label: "Construction Enquiry", href: "/contact?type=construction" },
           { label: "Real Estate Enquiry", href: "/contact?type=real-estate", variant: "outline" },

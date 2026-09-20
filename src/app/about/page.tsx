@@ -34,9 +34,9 @@ export default function AboutPage() {
           { label: "Start a Conversation", href: "/contact", variant: "outline" },
         ]}
         infoItems={[
-          { label: "Projects completed", value: "200+" },
-          { label: "Years of experience", value: "10+" },
-          { label: "Core divisions", value: "02" },
+          { label: "Core divisions", value: "Construction + Real Estate" },
+          { label: "Project focus", value: "Residential • Commercial" },
+          { label: "Delivery style", value: "Transparent" },
           { label: "Based in", value: "Vellore" },
         ]}
         minHeight="min-h-[82vh]"

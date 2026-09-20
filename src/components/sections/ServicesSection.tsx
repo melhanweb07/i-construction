@@ -9,7 +9,7 @@ export default function ServicesSection({ services }: { services: Service[] }) {
     <section className="bg-[#0B0D0E] py-24 md:py-32">
       <div className="container-fluid">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
-          <SectionHeading index="02 / 06" eyebrow="What We Build" title="Capability across every build type." light />
+          <SectionHeading index="02 — SERVICES" eyebrow="What We Build" title="Capability built around lasting value." light />
           <Link
             href="/construction/services"
             className="group inline-flex shrink-0 items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-[#F4F1EA] transition-colors hover:text-[#C8A45D]"

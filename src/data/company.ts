@@ -1,7 +1,5 @@
 import type { CompanyInfo, CompanyStat } from "@/types";
 
-// NOTE: Placeholder company information. Replace with verified figures
-// before production launch. Structured for future API integration.
 export const company: CompanyInfo = {
   name: "I Construction",
   shortName: "I Construction",
@@ -19,20 +17,18 @@ export const company: CompanyInfo = {
   },
 };
 
-// Placeholder statistics — designed as data objects so they can later be
-// sourced from an API without changing the presentation components.
 export const companyStats: CompanyStat[] = [
-  { id: "projects", value: 200, suffix: "+", label: "Projects Completed" },
-  { id: "experience", value: 10, suffix: "+", label: "Years of Experience" },
-  { id: "clients", value: 150, suffix: "+", label: "Happy Clients" },
-  { id: "ongoing", value: 15, suffix: "+", label: "Ongoing Projects" },
+  { id: "projects", value: null, label: "Projects Completed" },
+  { id: "experience", value: null, label: "Years of Experience" },
+  { id: "clients", value: null, label: "Happy Clients" },
+  { id: "ongoing", value: null, label: "Ongoing Projects" },
 ];
 
 export const heroInfoStrip = [
-  { label: "Established", value: "Placeholder" },
-  { label: "Projects", value: "200+" },
-  { label: "Experience", value: "Placeholder" },
-  { label: "Locations", value: "Placeholder" },
+  { label: "Based in", value: "Vellore, Tamil Nadu" },
+  { label: "Division", value: "Construction + Real Estate" },
+  { label: "Focus", value: "Residential • Commercial" },
+  { label: "Approach", value: "Quality Driven" },
 ];
 
 export const timeline = [
@@ -40,7 +36,7 @@ export const timeline = [
     year: "Established",
     title: "The foundation",
     description:
-      "I Construction was founded with a commitment to disciplined engineering and honest delivery. (Placeholder — replace with verified founding year.)",
+      "I Construction began with a commitment to disciplined engineering, transparent project delivery and quality-first execution across residential and commercial work.",
   },
   {
     year: "Initial Projects",
@@ -89,29 +85,31 @@ export const coreValues = [
 
 export const whyChooseUs = [
   {
-    title: "200+ Completed Projects",
-    description: "A growing portfolio across residential, commercial and industrial construction.",
-  },
-  {
-    title: "Experienced Professionals",
-    description: "Engineers, architects and site teams with hands-on execution expertise.",
-  },
-  {
-    title: "Quality Construction",
-    description: "Material-grade discipline and inspection at every stage of the build.",
+    title: "Engineering First",
+    description: "Every project begins with planning, precision and structural thinking.",
   },
   {
     title: "Transparent Process",
-    description: "Clear documentation, timelines and budgets shared with every client.",
+    description: "Clear communication, documentation and project visibility at every stage.",
   },
   {
-    title: "Customer-Focused Approach",
-    description: "Dedicated points of contact from enquiry through to final handover.",
+    title: "Quality Materials",
+    description: "Material selection focused on durability, finish and long-term performance.",
   },
   {
-    title: "Timely Execution",
-    description: "Structured project planning to keep builds on schedule.",
+    title: "Complete Accountability",
+    description: "One team from planning and execution to final handover.",
   },
+];
+
+export const constructionProcessSteps = [
+  { number: "01", title: "Consultation", description: "Understanding the brief, site context and design intent." },
+  { number: "02", title: "Site Visit", description: "Assessing constraints, approvals and practical build considerations." },
+  { number: "03", title: "Design & Estimation", description: "Developing workable scopes, budgets and technical direction." },
+  { number: "04", title: "Approval", description: "Coordinating necessary clearances and stakeholder sign-off." },
+  { number: "05", title: "Construction", description: "Execution with daily oversight, scheduling and quality control." },
+  { number: "06", title: "Quality Check", description: "Inspection at critical milestones before final handover." },
+  { number: "07", title: "Handover", description: "Final walkthrough, documentation and completion-ready delivery." },
 ];
 
 export const missionVision = {

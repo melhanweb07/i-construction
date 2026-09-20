@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
@@ -40,6 +40,12 @@ export default function Hero({
 }: HeroProps) {
   const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
+  const [mounted, setMounted] = useState(false);
+  const readyForMotion = mounted && !reduced;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
@@ -62,15 +68,21 @@ export default function Hero({
       onMouseMove={onMouseMove}
       className={`relative flex ${minHeight} w-full items-end overflow-hidden bg-[#0B0D0E] pt-24`}
     >
-      <motion.div
-        initial={{ scale: 1.08 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1.8, ease: EASE }}
-        style={reduced ? undefined : { x: sx, y: sy }}
-        className="absolute inset-[-2%]"
-      >
-        <Image src={image} alt="" fill priority quality={70} sizes="100vw" className="object-cover" />
-      </motion.div>
+      {readyForMotion ? (
+        <motion.div
+          initial={{ scale: 1.08 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.8, ease: EASE }}
+          style={{ x: sx, y: sy }}
+          className="absolute inset-[-2%]"
+        >
+          <Image src={image} alt="" fill priority quality={70} sizes="100vw" className="object-cover" />
+        </motion.div>
+      ) : (
+        <div className="absolute inset-[-2%]">
+          <Image src={image} alt="" fill priority quality={70} sizes="100vw" className="object-cover" />
+        </div>
+      )}
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -151,20 +163,26 @@ export default function Hero({
         )}
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 1.5 }}
-        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[#A5A5A0] md:flex"
-        aria-hidden
-      >
+      {readyForMotion ? (
         <motion.div
-          animate={reduced ? undefined : { y: [0, 8, 0] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.5 }}
+          className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[#A5A5A0] md:flex"
+          aria-hidden
         >
-          <ChevronDown className="size-5" />
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <ChevronDown className="size-5" />
+          </motion.div>
         </motion.div>
-      </motion.div>
+      ) : (
+        <div className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[#A5A5A0] md:flex" aria-hidden>
+          <ChevronDown className="size-5" />
+        </div>
+      )}
     </section>
   );
 }

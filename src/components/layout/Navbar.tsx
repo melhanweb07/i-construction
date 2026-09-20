@@ -11,10 +11,11 @@ import MobileMenu from "./MobileMenu";
 const centerLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/construction/services" },
+  { label: "Construction", href: "/construction" },
   { label: "Projects", href: "/construction/projects" },
   { label: "Real Estate", href: "/real-estate" },
   { label: "Media", href: "/media" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -86,15 +87,9 @@ export default function Navbar() {
           <DivisionSwitcher />
           <Link
             href="/contact"
-            className="text-xs font-medium uppercase tracking-[0.15em] text-[#F4F1EA]/80 transition-colors hover:text-[#F4F1EA]"
-          >
-            Contact
-          </Link>
-          <Link
-            href="/contact"
             className="inline-flex items-center border border-[#C8A45D] px-5 py-2.5 text-xs font-medium uppercase tracking-[0.15em] text-[#C8A45D] transition-colors duration-300 hover:bg-[#C8A45D] hover:text-[#0B0D0E]"
           >
-            Enquire
+            Start a Project
           </Link>
         </div>
 

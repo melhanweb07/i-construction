@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
     title: "Video: Completed Walkthrough of Orion Business Park",
     excerpt: "A full walkthrough of the completed commercial development, from lobby to top-floor terrace.",
     content: [
-      "This walkthrough video (placeholder) tours the completed Orion Business Park development, highlighting the column-free floor plates, the glazed facade system and the rooftop terrace amenity space.",
+      "This walkthrough highlights the completed Orion Business Park development, including the column-free floor plates, glazed facade system and rooftop terrace amenity space.",
       "Commercial leasing enquiries for available floors can be directed through our contact page.",
     ],
     category: "Videos",
@@ -118,7 +118,7 @@ export const blogPosts: BlogPost[] = [
     title: "Video: I Construction Company Showreel 2024",
     excerpt: "A cinematic look back at the projects delivered across construction and real estate this year.",
     content: [
-      "This showreel (placeholder) brings together highlights from residential, commercial and industrial projects delivered this year, alongside a look at newly available plots from I Real Estate.",
+      "This showreel brings together highlights from residential, commercial and industrial work, alongside a look at selected opportunities across I Real Estate.",
     ],
     category: "Videos",
     date: "2024-12-30",

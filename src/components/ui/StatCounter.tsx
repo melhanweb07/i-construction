@@ -5,13 +5,15 @@ import { motion, useInView, animate } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface StatCounterProps {
-  value: number;
+  value: number | null;
   suffix?: string;
   label: string;
   className?: string;
 }
 
 export default function StatCounter({ value, suffix = "", label, className }: StatCounterProps) {
+  if (value === null) return null;
+
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
   const [display, setDisplay] = useState(0);

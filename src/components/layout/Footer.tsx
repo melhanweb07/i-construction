@@ -121,13 +121,11 @@ export default function Footer() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-[#1c1e1f] pt-8 text-xs text-[#6b6b67] sm:flex-row">
           <p>© {new Date().getFullYear()} I Construction. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <Link href="/privacy-policy" className="hover:text-[#A5A5A0]">
-              Privacy Policy
+          <div className="flex items-center gap-4 text-[#A5A5A0]">
+            <Link href="/contact" className="hover:text-[#F4F1EA]">
+              Enquiries
             </Link>
-            <Link href="/terms" className="hover:text-[#A5A5A0]">
-              Terms
-            </Link>
+            <span>Documentation available on request.</span>
           </div>
         </div>
       </div>

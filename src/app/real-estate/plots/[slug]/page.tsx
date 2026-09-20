@@ -116,17 +116,19 @@ export default async function PropertyDetailPage({
               <p className="mt-4 text-sm text-[#A5A5A0]">{property.roadAccess}</p>
             </div>
 
-            <div className="mt-14">
-              <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-[#C8A45D]">Map</h3>
-              <div className="mt-4 flex aspect-[16/7] items-center justify-center border border-dashed border-[#2a2d2e] bg-[#101213] text-xs uppercase tracking-[0.15em] text-[#596B5A]">
-                Map placeholder — {property.location}
+            <div className="mt-14 grid gap-5 md:grid-cols-2">
+              <div className="border border-[#232628] bg-[#101213] p-6">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-[#C8A45D]">Map</p>
+                <p className="mt-4 text-sm leading-relaxed text-[#A5A5A0]">
+                  Site location details can be shared once the exact address or nearby landmarks are confirmed.
+                </p>
               </div>
-            </div>
 
-            <div className="mt-14">
-              <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-[#C8A45D]">Video</h3>
-              <div className="mt-4 flex aspect-video items-center justify-center border border-dashed border-[#2a2d2e] bg-[#101213] text-xs uppercase tracking-[0.15em] text-[#596B5A]">
-                Video walkthrough placeholder
+              <div className="border border-[#232628] bg-[#101213] p-6">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-[#C8A45D]">Virtual Tour</p>
+                <p className="mt-4 text-sm leading-relaxed text-[#A5A5A0]">
+                  A walkthrough can be arranged on request for a more detailed review of the plot and surrounding area.
+                </p>
               </div>
             </div>
           </div>
